@@ -1,5 +1,7 @@
 # FrontEndSistemaDeGestionDeTareas
 
+Simplemente instalar las dependiencias con npm install y ejecutar el proyecto mediante npm start o ng server como deseen
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
 
 ## Development server

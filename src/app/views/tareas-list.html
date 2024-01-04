@@ -1,0 +1,45 @@
+<h3>{{ titulo }}</h3>
+<hr />
+
+<div *ngIf="!tareas">
+    Cargando listado de tareas...
+</div>
+
+<div *ngIf="tareas">
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let tarea of tareas">
+            <div class="thumbnail">
+                <div class="caption">
+                    <td>{{ tarea.title }}</td>
+                    <td>{{ tarea.description }}</td>
+                    
+
+                    <!-- Botones -->
+                    <!--
+                    <div class="botones" *ngIf="confirmado != tarea.id">
+                        <a [routerLink]="['/tarea', tarea.id]" class="btn btn-md btn-primary">Ver</a>
+                        <a [routerLink]="['/editar-tarea', tarea.id]" class="btn btn-md btn-warning">Editar</a>
+                        <a (click)="borrarConfirm(tarea.id)" class="btn btn-md btn-danger">Borrar</a>
+                    </div>
+
+                    <div class="seguro" *ngIf="confirmado == tarea.id">
+                        <a (click)="onDeletetarea(tarea.id)" class="btn btn-md btn-danger">
+                            Quiero eliminarlo
+                        </a>
+                        <a (click)="cancelarConfirm()" class="btn btn-md btn-warning">Cancelar</a>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Paginación -->
+    <div class="row">
+        <div class="col">
+          <button class="btn btn-secondary" (click)="goToPreviousPage()">Anterior</button>
+        </div>
+        <div class="col text-right">
+          <button class="btn btn-secondary" (click)="goToNextPage()">Siguiente</button>
+        </div>
+    </div>
+</div>
